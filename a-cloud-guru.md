@@ -258,5 +258,124 @@
 - Consistency
 - Dependencies between resources
 - Access control
-- Tagging to logically organize resouces
+- Tagging to logically organize resources
 - Billing by group by tag
+
+---
+
+## 4. Compute
+
+### Virtual Machines
+
+- Computer or server you have exclusive access to
+- May be multiple machines on same set of hardware
+- IaaS
+
+### Scale Sets
+
+- Create and balance a group of identical, load-balanced VMs
+- Clones of VMs
+- Scale out
+- Multiple VMs
+- High Availability
+- Auto Scaling
+- Large Scale (up to 1000 VMs per scale set)
+- No extra costs (only VMs - no load balancers)
+- Iaas
+
+### App Services
+
+- PaaS
+- Fully-managed platform
+- Servers, network, storage managed
+- Types
+  - Web Apps
+    - Windows
+    - Linux
+    - Many languages
+    - Easy integration
+    - Autoscaling / Load balancing - resilient . highly-available
+  - Web Apps for containers
+    - All dependencies shipped inside container
+    - Run reliably across environments
+  - API apps
+    - Application programming interface
+    - No front end
+    - Connect to other applications programatically
+
+### Azure Container Instances
+
+- Manage dependencies
+- All included in container
+- Less overhead than VM (no OS)
+- Increased portability across OS and hardware
+- Efficiency - scale and patch
+- Consistency
+- Process
+  - Software Development Cycle
+  - Application placed in container
+  - Azure container instances
+    - Primary service to host and run workload in container
+    - Run containers without managing any virtual machines
+    - Process data on demand by only creating container image when needed
+    - Portal, CLI, or PowerShell
+
+### Azure Kubernetes Service
+
+- Greek for governor or captain
+- K8s - also pronounced kubernetes
+- From google
+- Open-source container orchestration system for automating application deployment, scaling, and management
+- Makes sure conainers are configured to correctly work together
+- Deploy more images / instances of containers as needed
+- Automatically scales load
+- Azure Kubernetes
+  - Replicate container architecture
+  - Standard Azure Services included - IAM, elastic provisioning, etc
+  - Global reach
+    - Supported regions
+    - On-premesis with Azure Stack
+- Azure Container Registry (ACR)
+  - Keep track of current valid container image
+  - Manages files and artifacts for containers
+  - Feeds container images to ACI and AKS
+  - Use Azure identity and security features
+- Clusters, containing pods, containing containers for applications
+
+### Windows Virtual Desktop
+
+- Azure Virtual Desktop
+- Remote workers virtual machines
+- 100% run on azure
+- Use any size and configuration for instance
+- Use from windows devices, mac os, company infrastructure
+- Reuse windows 10 licenses
+- Multiple users on same instance
+- Consider using windows VM on mac through azure
+
+### Functions
+
+- Serverless functions
+- No maintenance / process / anything VM relates
+- Fully-managed
+- Only run when needed
+  - No resources running - no costs
+- Saves money
+- Resilient - if it fails it doesn't break other things
+
+### Summary II
+
+- VMs hardware you control
+- Scale Sets - set of identical for high availability
+- App Services
+  - Web app
+  - Containers
+- Azure Container Instance
+- Azure Kubernetes - orchestrates many containers
+- Windows Virtual Desktop
+- Serverless functions for compute (like lambda)
+
+---
+
+## 5. Networking
+
