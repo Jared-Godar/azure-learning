@@ -207,4 +207,56 @@
 
 ---
 
-## 3. 
+## 3. Azure Architecture
+
+### Regions
+
+> " A region is a set of datacenters deployed within a latency-defined perimeter and connected through a dedicated regional low-latency network."
+
+- More than one physical data centers
+- Latency: time it takes dat ato travel
+- "two or more not too fat apart connected by fiber"
+- COnsiderations in choosing region
+  - Proximity to users
+  - Features - not all available in all regions
+  - Price - varies regionally (20-30%)
+  - Find balance between three
+
+### Paired Regions
+
+- All regions paired with another within same geographic area
+- Outage failover
+- Planned updates - only one paired region updated at a time
+- Replication CRR
+
+### Availability Zones
+
+- Unique physical locations within a region
+- At least three zones per region
+- Independent power, cooling, networking
+- VMs - select how many zones it will be in 1-3+
+- ZOne-redundant storage automatically replicated across zones
+- High availability
+
+### Resource Groups
+
+- Everything in Azure is inside a resource group
+  - Container for related resources for an azure solution
+- Critical to manage resources
+- Each resource can only exist in one group
+- Can Add/remove
+- Move resources from one group to another
+- Resources from multiple regions can be in one resource group
+- Access control at group level
+- Can interact with different resources in different groups
+
+### Azure Resource Manager (ARM)
+
+- Create, manage, delete resources
+- Portal, powershell, CLI, SDK, API - all use ARM
+- Group Resource Handling
+- Consistency
+- Dependencies between resources
+- Access control
+- Tagging to logically organize resouces
+- Billing by group by tag
